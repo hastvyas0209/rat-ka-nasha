@@ -80,7 +80,7 @@ async def start_command(client: Client, message: Message):
             ad_url = shorten_url(f"https://telegram.me/{TG_BOT_USERNAME}?start=token_{ad_code}")
             await client.send_message(
                 message.chat.id,
-                f"Hey bro **{message.from_user.mention}** \n\nYour Ads token is expired, refresh your token and try again. \n\n**Token Timeout:** 24 hour \n\n**What is token?** \nThis is an ads token. If you pass 1 ad, you can use the bot for 24 hour after passing the ad. \n\nwatch video tutorial if you're facing issue \n<a href='https://telegram.me/howtodownloadin/16'</a>",
+                f"Hey bro **{message.from_user.mention}** \n\nYour Ads token is expired, refresh your token and try again. \n\n**Token Timeout:** 24 hour \n\n**What is token?** \nThis is an ads token. If you pass 1 ad, you can use the bot for 24 hour after passing the ad. \n\nwatch video tutorial if you're facing issue <a href='https://telegram.me/howtodownloadin/16'>Click Here</a>",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [

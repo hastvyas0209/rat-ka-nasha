@@ -35,7 +35,7 @@ async def start_command(client: Client, message: Message):
             if int(user_id) != int(ad_msg.split(":")[0]):
                 await client.send_message(
                     message.chat.id,
-                    "This Token Is Not For You<br>and if you using 2 telegram apps then uninstall this one...",
+                    "This Token Is Not For You<br>or maybe you using 2 telegram apps if yes then uninstall this one...",
                     reply_to_message_id=message.id,
                 )
                 return
@@ -80,7 +80,7 @@ async def start_command(client: Client, message: Message):
             ad_url = shorten_url(f"https://telegram.me/{TG_BOT_USERNAME}?start=token_{ad_code}")
             await client.send_message(
                 message.chat.id,
-                f"Hey **{message.from_user.mention}** \n\nYour Ads token is expired, refresh your token and try again. \n\n**Token Timeout:** 24 hour \n\n**What is token?** \nThis is an ads token. If you pass 1 ad, you can use the bot for 24 hour after passing the ad.",
+                f"Hey bro **{message.from_user.mention}** \n\nYour Ads token is expired, refresh your token and try again. \n\n**Token Timeout:** 24 hour \n\n**What is token?** \nThis is an ads token. If you pass 1 ad, you can use the bot for 24 hour after passing the ad.<br> watch video tutorial if you're facing issue<br>href="https://telegram.me/howtodownloadin/16",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [

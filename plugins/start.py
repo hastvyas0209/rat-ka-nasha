@@ -35,7 +35,7 @@ async def start_command(client: Client, message: Message):
             if int(user_id) != int(ad_msg.split(":")[0]):
                 await client.send_message(
                     message.chat.id,
-                    "This Token Is Not For You<br>or maybe you using 2 telegram apps if yes then uninstall this one...",
+                    "This Token Is Not For You \n\nor maybe you using 2 telegram apps if yes then uninstall this one...",
                     reply_to_message_id=message.id,
                 )
                 return

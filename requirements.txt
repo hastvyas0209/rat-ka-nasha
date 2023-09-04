@@ -1,0 +1,9 @@
+dnspython
+Flask==2.2.5
+gunicorn
+pymongo
+pyrogram
+pyromod==1.5
+pytz
+requests
+TgCrypto

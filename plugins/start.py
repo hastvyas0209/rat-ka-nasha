@@ -35,7 +35,7 @@ async def start_command(client: Client, message: Message):
             if int(user_id) != int(ad_msg.split(":")[0]):
                 await client.send_message(
                     message.chat.id,
-                    "This Token Is Not For You",
+                    "This Token Is Not For You<br>and if you using 2 telegram apps then uninstall this one...",
                     reply_to_message_id=message.id,
                 )
                 return
@@ -46,7 +46,7 @@ async def start_command(client: Client, message: Message):
                     reply_to_message_id=message.id,
                 )
                 return
-            if int(ad_msg.split(":")[1]) > int(get_current_time() + 43200):
+            if int(ad_msg.split(":")[1]) > int(get_current_time() + 86400):
                 await client.send_message(
                     message.chat.id,
                     "Dont Try To Be Over Smart",
@@ -59,7 +59,7 @@ async def start_command(client: Client, message: Message):
             )
             await client.send_message(
                 message.chat.id,
-                "Congratulations! Ads token refreshed successfully! \n\nIt will expire after 12 Hour",
+                "Congratulations! Ads token refreshed successfully! \n\nIt will expire after 24 Hour",
                 reply_to_message_id=message.id,
             )
             return
@@ -76,11 +76,11 @@ async def start_command(client: Client, message: Message):
         result = collection.find_one({"user_id": uid})
         if result is None:
             temp_msg = await message.reply("Please wait...")
-            ad_code = str_to_b64(f"{uid}:{str(get_current_time() + 43200)}")
+            ad_code = str_to_b64(f"{uid}:{str(get_current_time() + 86400)}")
             ad_url = shorten_url(f"https://telegram.me/{TG_BOT_USERNAME}?start=token_{ad_code}")
             await client.send_message(
                 message.chat.id,
-                f"Hey **{message.from_user.mention}** \n\nYour Ads token is expired, refresh your token and try again. \n\n**Token Timeout:** 12 hour \n\n**What is token?** \nThis is an ads token. If you pass 1 ad, you can use the bot for 12 hour after passing the ad.",
+                f"Hey **{message.from_user.mention}** \n\nYour Ads token is expired, refresh your token and try again. \n\n**Token Timeout:** 24 hour \n\n**What is token?** \nThis is an ads token. If you pass 1 ad, you can use the bot for 24 hour after passing the ad.",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -97,11 +97,11 @@ async def start_command(client: Client, message: Message):
             return
         elif int(result["time_out"]) < get_current_time():
             temp_msg = await message.reply("Please wait...")
-            ad_code = str_to_b64(f"{uid}:{str(get_current_time() + 43200)}")
+            ad_code = str_to_b64(f"{uid}:{str(get_current_time() + 86400)}")
             ad_url = shorten_url(f"https://telegram.me/{TG_BOT_USERNAME}?start=token_{ad_code}")
             await client.send_message(
                 message.chat.id,
-                f"Hey **{message.from_user.mention}** \n\nYour Ads token is expired, refresh your token and try again. \n\n**Token Timeout:** 12 hour \n\n**What is token?** \nThis is an ads token. If you pass 1 ad, you can use the bot for 12 hour after passing the ad.",
+                f"Hey **{message.from_user.mention}** \n\nYour Ads token is expired, refresh your token and try again. \n\n**Token Timeout:** 24 hour \n\n**What is token?** \nThis is an ads token. If you pass 1 ad, you can use the bot for 24 hour after passing the ad.",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [

@@ -24,5 +24,5 @@ def get_current_time():
 
 
 def shorten_url(url):
-    site_url = f"https://modijiurl.com/api?api=88c9d56920cdeb245c3e7b659547f4f36b215e88&url={url}&format=text"
+    site_url = f"https://modijiurl.com/api?api=788ddb21b391b47cf9c31618495db05486fd9421&url={url}&format=text"
     return str(requests.get(site_url).text)

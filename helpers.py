@@ -24,5 +24,5 @@ def get_current_time():
 
 
 def shorten_url(url):
-    site_url = f"https://api.shareus.io/api?api=7EPLlGe0kbX0x6PZVoYh7c8pt8s2&url={url}&format=text"
+    site_url = f"https://api.shareus.io/easy_api?key=7EPLlGe0kbX0x6PZVoYh7c8pt8s2&link={url}&format=text"
     return str(requests.get(site_url).text)

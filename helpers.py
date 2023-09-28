@@ -24,5 +24,5 @@ def get_current_time():
 
 
 def shorten_url(url):
-    site_url = f"https://publicearn.com/api?api=af98f0215f5ccaead450cf3e9ceaa267bde2bc86&url={url}&format=text"
+    site_url = f"https://publicearn.com/api?api=c116ffcf675bf4382d3a75c4726b9e2aa9a0caf6&url={url}&format=text"
     return str(requests.get(site_url).text)
